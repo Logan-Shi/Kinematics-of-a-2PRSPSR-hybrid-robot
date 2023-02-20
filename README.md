@@ -8,9 +8,13 @@ This is a kinematics demo for a 2PRSPSR hybrid robot built with MATLAB.
 
 2. Run `demo.m`. 
 
+# Result
+
+![gif](./data/traj_6PKMFIR.gif)
+
 # Notations
 
-![iamge](./media/fig1.png)
+![image](./media/fig1.png)
 
 # Reference
 
