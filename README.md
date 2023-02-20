@@ -18,4 +18,4 @@ This is a kinematics demo for a 2PRSPSR hybrid robot built with MATLAB.
 
 # Reference
 
-The notation about kinematics is given in the [preprint](https://www.researchgate.net/publication/367048787_A_Local_Toolpath_Smoothing_Method_for_a_Five-axis_Hybrid_Machining_Robot). 
+The notation about the kinematics is defined in the [preprint](https://www.researchgate.net/publication/367048787_A_Local_Toolpath_Smoothing_Method_for_a_Five-axis_Hybrid_Machining_Robot). 
