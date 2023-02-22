@@ -18,4 +18,9 @@ This is a kinematics demo for a 2PRSPSR hybrid robot built with MATLAB.
 
 # Reference
 
-The notation about the kinematics is defined in the [preprint](https://www.researchgate.net/publication/367048787_A_Local_Toolpath_Smoothing_Method_for_a_Five-axis_Hybrid_Machining_Robot). 
+The notation about the kinematics is defined in the paper. 
+
+ZiKang SHI, WeiJia ZHANG, Ye DING, A local toolpath smoothing method for a five-axis hybrid machining robot,  SCIENCE CHINA Technological Sciences, -, ISSN 1674-7321, https://doi.org/10.1007/s11431-022-2315-7.
+(http://www.sciengine.com/doi/10.1007/s11431-022-2315-7)
+
+Keywords: hybrid robot; toolpath smoothing; B-spline; five-axis machining; trajectory generation; 
