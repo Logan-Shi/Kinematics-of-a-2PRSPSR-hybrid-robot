@@ -81,7 +81,7 @@ px = p+[x,y,0]; px(1,1) = -px(1,1);
 ox = o;ox(1,1) = -ox(1,1);
 plot5_axisTraj(px,ox,'r',l,[],[])
 T = eye(4);
-T(1:3,4) = [x;y;0];
+T(1:3,4) = [-x;y;0];
 trplot(T,'length',l)
 hold off
 axis([-200 200 -250 250 -100 600])
