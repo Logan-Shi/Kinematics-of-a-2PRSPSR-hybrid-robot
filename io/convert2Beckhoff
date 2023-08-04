@@ -1,0 +1,22 @@
+function traj_new = convert2Beckhoff(traj,params)
+[p0,o0] = fkineCNC(traj(1,:),params,[0,0,0,0,0,1]);
+if distOnSphere([o0;0,0,1]) <1e-3
+    traj = traj - traj(1,:); %% only valid when the orientation is the identity. 
+else
+    error('please start from o = [0,0,1]')
+end
+% axis 1
+traj_new(:,1) = traj(:,4); % x
+% axis 2
+traj_new(:,2) = traj(:,5); % y
+% axis 3
+traj_new(:,3) = -traj(:,1); % q1
+% axis 4
+traj_new(:,4) = -traj(:,3); % q3
+% axis 5
+traj_new(:,5) = -traj(:,2); % q2
+
+% home position where p = [0,0,0] and o = [0 0 1]
+home_position = params.home_position;
+traj_new = traj_new + home_position;
+end
