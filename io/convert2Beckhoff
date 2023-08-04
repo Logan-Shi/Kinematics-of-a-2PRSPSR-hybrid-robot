@@ -1,4 +1,21 @@
 function traj_new = convert2Beckhoff(traj,params)
+% The 'traj' defined in the theoretical kinematic model is listed as [q1,q2,q3,x,y]. 
+% To make the experimental system follow the theoretical trajectory,
+% the coordinates need to be converted. 
+% When the first point [traj(1,:)] is defaulted at o0 = (0,0,1)^T, 
+% only the translational offset need to be converted. 
+% Such translation is offset by addition to the 'home_position'. 
+% Example,
+% Suppose traj = [30,30,30, 0, 0; ...
+%                 20,30,30,10,20],
+% Then, offset traj = traj-traj(1,:) = [ 0, 0, 0, 0, 0; ...
+%                                      -10, 0, 0, 10,20],
+% The offset traj is added to the 'home_position'
+% that is, axis 1 moves 10 mm to the right
+%          axis 2 moves 20 mm to the front
+%          axis 3 moves up 10 mm
+%          axis 4 and 5 remain at the home position. 
+
 [p0,o0] = fkineCNC(traj(1,:),params,[0,0,0,0,0,1]);
 if distOnSphere([o0;0,0,1]) <1e-3
     traj = traj - traj(1,:); %% only valid when the orientation is the identity. 
